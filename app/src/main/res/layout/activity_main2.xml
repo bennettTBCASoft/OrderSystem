@@ -13,8 +13,8 @@
         android:text="飲料："
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="25dp"
-        android:layout_marginStart="25dp"
         android:textSize="25sp"
         android:textStyle="bold"
         />
@@ -28,6 +28,7 @@
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="@id/textView4"
         app:layout_constraintTop_toBottomOf="@id/textView4"
+        app:layout_constraintEnd_toEndOf="@id/textView4"
         tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
@@ -37,11 +38,10 @@
         android:text="甜度："
         app:layout_constraintTop_toBottomOf="@id/ev_drinkName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/textView6"
+        app:layout_constraintEnd_toEndOf="@id/guideCenter"
         android:layout_marginTop="25dp"
         android:textSize="25sp"
         android:textStyle="bold"
-
         />
 
     <RadioGroup
@@ -50,6 +50,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/textView5"
         app:layout_constraintStart_toStartOf="@id/textView5"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
         android:layout_marginTop="10dp">
 
         <RadioButton
@@ -76,14 +77,21 @@
             android:layout_height="wrap_content"
             android:text="全糖" />
     </RadioGroup>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideCenter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
 
+        />
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="冰塊："
         app:layout_constraintTop_toTopOf="@id/textView5"
-        app:layout_constraintStart_toEndOf="@id/textView5"
+        app:layout_constraintStart_toEndOf="@id/guideCenter"
         app:layout_constraintEnd_toEndOf="parent"
         android:textSize="25sp"
         android:textStyle="bold"
